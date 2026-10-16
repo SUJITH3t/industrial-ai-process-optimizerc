@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensor & Telemetry History - Smart MFG</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-icon">
+                    <i class="fa-solid fa-industry"></i>
+                </div>
+                <div class="brand-title">
+                    <h2>Smart MFG</h2>
+                    <span>AI Process Suite</span>
+                </div>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="dashboard.html"><i class="fa-solid fa-gauge-high"></i> Dashboard</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="history.html"><i class="fa-solid fa-clock-rotate-left"></i> Telemetry History</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Sign Out</a>
+                </li>
+            </ul>
+
+            <div class="sidebar-footer">
+                <div class="system-badge">
+                    <div style="display:flex; align-items:center; gap:8px;">
+                        <div class="pulse-dot"></div>
+                        <span>Database Synced</span>
+                    </div>
+                    <small>:5001</small>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main -->
+        <main class="main-content">
+            <header class="topbar">
+                <div class="topbar-left">
+                    <h1>Historical Sensor Telemetry</h1>
+                    <p>Audit trail of all equipment readings stored in SQLite / PostgreSQL</p>
+                </div>
+                <div class="topbar-right">
+                    <button class="btn btn-primary" id="refreshHistoryBtn">
+                        <i class="fa-solid fa-arrows-rotate"></i> Refresh Database
+                    </button>
+                    <a href="dashboard.html" class="btn btn-secondary">
+                        <i class="fa-solid fa-arrow-left"></i> Back to Dashboard
+                    </a>
+                </div>
+            </header>
+
+            <div style="padding: 28px 32px;">
+                <div class="glass-panel">
+                    <div class="panel-header">
+                        <h3><i class="fa-solid fa-table-list"></i> Logged Process Records</h3>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Temperature (°C)</th>
+                                    <th>Pressure (bar)</th>
+                                    <th>Humidity (%)</th>
+                                    <th>Speed (RPM)</th>
+                                    <th>Vibration (mm/s)</th>
+                                    <th>Material (kg/h)</th>
+                                    <th>Power (kW)</th>
+                                    <th>Created At</th>
+                                </tr>
+                            </thead>
+                            <tbody id="historyTableBody">
+                                <tr>
+                                    <td colspan="9" style="text-align: center; color: var(--text-muted);">Loading sensor history...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/history.js"></script>
+</body>
+</html>

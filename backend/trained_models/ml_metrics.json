@@ -1,0 +1,119 @@
+{
+  "best_model": "Logistic Regression",
+  "models": [
+    {
+      "name": "Logistic Regression",
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "train_time": 0.015062124999531079,
+      "predict_time": 0.0010679159968276508
+    },
+    {
+      "name": "Decision Tree",
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "train_time": 0.003074332998949103,
+      "predict_time": 0.0010866660013562068
+    },
+    {
+      "name": "Random Forest",
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "train_time": 0.04654020800080616,
+      "predict_time": 0.002883957997255493
+    },
+    {
+      "name": "Gradient Boosting",
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "train_time": 0.019613999997091014,
+      "predict_time": 0.0013240410044090822
+    },
+    {
+      "name": "Support Vector Machine (SVM)",
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "train_time": 0.0031612499951734208,
+      "predict_time": 0.0013249999974505045
+    },
+    {
+      "name": "K-Nearest Neighbors (KNN)",
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "train_time": 0.007851207999920007,
+      "predict_time": 0.004392208000354003
+    },
+    {
+      "name": "XGBoost",
+      "accuracy": 0.75,
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8,
+      "roc_auc": 0.75,
+      "train_time": 0.029423250001855195,
+      "predict_time": 0.0024759999942034483
+    }
+  ],
+  "feature_importance": {
+    "temperature": 0.2,
+    "pressure": 0.1667,
+    "humidity": 0.15,
+    "speed": 0.0833,
+    "vibration": 0.1,
+    "material": 0.15,
+    "power": 0.15
+  },
+  "confusion_matrix": [
+    [
+      2,
+      0
+    ],
+    [
+      0,
+      2
+    ]
+  ],
+  "roc_data": {
+    "fpr": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "tpr": [
+      0.0,
+      0.5,
+      1.0,
+      1.0
+    ]
+  },
+  "features": [
+    "temperature",
+    "pressure",
+    "humidity",
+    "speed",
+    "vibration",
+    "material",
+    "power"
+  ],
+  "samples_count": 20,
+  "target": "efficiency"
+}

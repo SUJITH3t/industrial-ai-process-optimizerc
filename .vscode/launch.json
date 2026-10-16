@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "🚀 Run Entire Project (Backend + Dashboard)",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/run.py",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Backend: Smart Manufacturing API (:5001)",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/backend/app.py",
+      "cwd": "${workspaceFolder}/backend",
+      "console": "integratedTerminal",
+      "env": {
+        "PORT": "5001"
+      },
+      "justMyCode": true
+    }
+  ]
+}

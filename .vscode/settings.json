@@ -1,0 +1,7 @@
+{
+  "liveServer.settings.port": 8081,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true
+  }
+}
